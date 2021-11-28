@@ -16,8 +16,7 @@ export default function Gnb() {
     if (data.name === "home") {
       router.push("/");
     } else if (data.name === "about") {
-      // router.push("/about");
-      loacation.herf = "/about";
+      router.push("/about");
     }
   }
   return (
@@ -27,6 +26,13 @@ export default function Gnb() {
         name="about"
         active={activeItem === "about"}
         onClick={goLink}
+      />
+      <Menu.Item
+        name="Contact Us"
+        active={activeItem === "Cibtact"}
+        onClick={() => {
+          router.push("/contact");
+        }}
       />
     </Menu>
   );
